@@ -13,7 +13,7 @@ outlines = [ PoolVector2Array( 150.61, 567.031, 304.017, 300.649, 369.424, 300.6
 [node name="Entrance" type="Node2D"]
 
 [node name="Background" type="Sprite" parent="."]
-position = Vector2( 410.734, 318.76 )
+position = Vector2( 412.5, 318.76 )
 scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 1 )
 
@@ -46,6 +46,7 @@ texture = ExtResource( 3 )
 flip_h = true
 
 [node name="Navigation2D" type="Navigation2D" parent="."]
+position = Vector2( 2.37842, 0 )
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D"]
 navpoly = SubResource( 1 )
