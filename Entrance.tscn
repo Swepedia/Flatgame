@@ -1,16 +1,41 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://graphics/level_entrance.jpg" type="Texture" id=1]
 [ext_resource path="res://graphics/plant_1.png" type="Texture" id=2]
 [ext_resource path="res://graphics/plant_3.png" type="Texture" id=3]
 [ext_resource path="res://graphics/plant_2.png" type="Texture" id=4]
+[ext_resource path="res://animations/arrow_straight_1.png" type="Texture" id=5]
+[ext_resource path="res://animations/arrow_straight_2.png" type="Texture" id=6]
+[ext_resource path="res://animations/dining_2.png" type="Texture" id=7]
+[ext_resource path="res://animations/dining_1.png" type="Texture" id=8]
+[ext_resource path="res://Scripts/Entrance.gd" type="Script" id=9]
+[ext_resource path="res://Scripts/ToDining.gd" type="Script" id=10]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 320.045, 347.172, 337.506, 334.43, 435.197, 339.857, 450.771, 354.487, 475.125, 380.53, 447.032, 381.28, 325.995, 378.847, 300.459, 376.321, 304.017, 300.649, 369.424, 300.649, 411.046, 305.406, 461.626, 318.148, 437.793, 320.272, 338.214, 314.136, 313.674, 312.013, 449.841, 407.125, 465.948, 417.988, 510.365, 500.013, 481.229, 501.945, 292.356, 500.301, 292.69, 480.946, 311.403, 408.592, 325.714, 395.684, 276.672, 516.319, 484.648, 525.73, 501.149, 531.824, 604.887, 644.33, 114.167, 644.33, 150.61, 567.031, 244.302, 516.653, 489.547, 415.179, 487.112, 394.203, 502.615, 410.056, 478.852, 355.431, 476.492, 338.205, 299.279, 343.161, 289.515, 383.617, 377.748, 247.135, 400.343, 247.135, 521.96, 524.838, 521.216, 512.054, 242.3, 509.645, 259.653, 479.277, 301.403, 323.103, 288.393, 400.454, 466.939, 303.027 )
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5, 6, 7 ), PoolIntArray( 8, 9, 10, 11, 12, 13, 14 ), PoolIntArray( 15, 16, 17, 18, 19, 20, 21, 22 ), PoolIntArray( 23, 24, 25, 26, 27, 28, 29 ), PoolIntArray( 30, 31, 32, 26 ), PoolIntArray( 32, 31, 33, 34 ), PoolIntArray( 33, 31, 4 ), PoolIntArray( 3, 33, 4 ), PoolIntArray( 13, 12, 2, 1 ), PoolIntArray( 35, 0, 7, 36 ), PoolIntArray( 22, 6, 5, 15 ), PoolIntArray( 19, 18, 24, 23 ), PoolIntArray( 9, 37, 38, 10 ), PoolIntArray( 25, 39, 26 ), PoolIntArray( 16, 30, 26, 40 ), PoolIntArray( 41, 29, 28 ), PoolIntArray( 36, 42, 41, 28, 8, 43 ), PoolIntArray( 26, 39, 40 ), PoolIntArray( 16, 40, 17 ), PoolIntArray( 44, 21, 20, 42 ), PoolIntArray( 36, 44, 42 ), PoolIntArray( 45, 32, 34 ), PoolIntArray( 45, 34, 11 ), PoolIntArray( 10, 45, 11 ), PoolIntArray( 8, 14, 43 ), PoolIntArray( 36, 43, 35 ) ]
 outlines = [ PoolVector2Array( 150.61, 567.031, 304.017, 300.649, 369.424, 300.649, 377.748, 247.135, 400.343, 247.135, 411.046, 305.406, 466.939, 303.027, 502.615, 410.056, 604.887, 644.33, 114.167, 644.33 ), PoolVector2Array( 242.3, 509.645, 259.653, 479.277, 292.69, 480.946, 292.356, 500.301, 276.672, 516.319, 244.302, 516.653 ), PoolVector2Array( 288.393, 400.454, 289.515, 383.617, 300.459, 376.321, 325.995, 378.847, 325.714, 395.684, 311.403, 408.592 ), PoolVector2Array( 299.279, 343.161, 301.403, 323.103, 313.674, 312.013, 338.214, 314.136, 337.506, 334.43, 320.045, 347.172 ), PoolVector2Array( 435.197, 339.857, 450.771, 354.487, 478.852, 355.431, 476.492, 338.205, 461.626, 318.148, 437.793, 320.272 ), PoolVector2Array( 449.841, 407.125, 447.032, 381.28, 475.125, 380.53, 487.112, 394.203, 489.547, 415.179, 465.948, 417.988 ), PoolVector2Array( 484.648, 525.73, 481.229, 501.945, 510.365, 500.013, 521.216, 512.054, 521.96, 524.838, 501.149, 531.824 ) ]
 
+[sub_resource type="RectangleShape2D" id=2]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 8 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
 [node name="Entrance" type="Node2D"]
+script = ExtResource( 9 )
 
 [node name="Background" type="Sprite" parent="."]
 position = Vector2( 412.5, 318.76 )
@@ -50,3 +75,21 @@ position = Vector2( 2.37842, 0 )
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D"]
 navpoly = SubResource( 1 )
+
+[node name="ToDining" type="Area2D" parent="."]
+script = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ToDining"]
+position = Vector2( 392.438, 195.03 )
+scale = Vector2( 9.87526, 4.89643 )
+shape = SubResource( 2 )
+
+[node name="DiningLabel" type="AnimatedSprite" parent="ToDining"]
+position = Vector2( 388.056, 156.23 )
+scale = Vector2( 0.262441, 0.262441 )
+frames = SubResource( 3 )
+
+[node name="DiningArrow" type="AnimatedSprite" parent="ToDining"]
+position = Vector2( 390.576, 203.477 )
+scale = Vector2( 0.175448, 0.175448 )
+frames = SubResource( 4 )
