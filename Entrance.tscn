@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://graphics/level_entrance.jpg" type="Texture" id=1]
 [ext_resource path="res://graphics/plant_1.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://animations/dining_1.png" type="Texture" id=8]
 [ext_resource path="res://Scripts/Entrance.gd" type="Script" id=9]
 [ext_resource path="res://Scripts/ToDining.gd" type="Script" id=10]
+[ext_resource path="res://graphics/note_1.png" type="Texture" id=11]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 320.045, 347.172, 337.506, 334.43, 435.197, 339.857, 450.771, 354.487, 475.125, 380.53, 447.032, 381.28, 325.995, 378.847, 300.459, 376.321, 304.017, 300.649, 369.424, 300.649, 411.046, 305.406, 461.626, 318.148, 437.793, 320.272, 338.214, 314.136, 313.674, 312.013, 449.841, 407.125, 465.948, 417.988, 510.365, 500.013, 481.229, 501.945, 292.356, 500.301, 292.69, 480.946, 311.403, 408.592, 325.714, 395.684, 276.672, 516.319, 484.648, 525.73, 501.149, 531.824, 604.887, 644.33, 114.167, 644.33, 150.61, 567.031, 244.302, 516.653, 489.547, 415.179, 487.112, 394.203, 502.615, 410.056, 478.852, 355.431, 476.492, 338.205, 299.279, 343.161, 289.515, 383.617, 377.748, 247.135, 400.343, 247.135, 521.96, 524.838, 521.216, 512.054, 242.3, 509.645, 259.653, 479.277, 301.403, 323.103, 288.393, 400.454, 466.939, 303.027 )
@@ -33,6 +34,14 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 } ]
+
+[sub_resource type="ParticlesMaterial" id=5]
+flag_disable_z = true
+direction = Vector3( 1, -4, 0 )
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 80.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
 
 [node name="Entrance" type="Node2D"]
 script = ExtResource( 9 )
@@ -93,3 +102,14 @@ frames = SubResource( 3 )
 position = Vector2( 390.576, 203.477 )
 scale = Vector2( 0.175448, 0.175448 )
 frames = SubResource( 4 )
+
+[node name="Particles2D" type="Particles2D" parent="."]
+position = Vector2( 657.634, 302.965 )
+scale = Vector2( 0.135625, 0.135625 )
+amount = 1
+lifetime = 3.0
+speed_scale = 0.0
+randomness = 0.56
+fixed_fps = 10
+process_material = SubResource( 5 )
+texture = ExtResource( 11 )

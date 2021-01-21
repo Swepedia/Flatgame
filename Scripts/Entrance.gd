@@ -9,6 +9,7 @@ func _ready():
 	dining_sign.play("default")
 	dining_arrow.hide()
 	dining_sign.hide()
+	$Particles2D.speed_scale = 1
 
 func _on_Dining_enter():
 	dining_arrow.show()
