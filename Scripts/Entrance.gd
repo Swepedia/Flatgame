@@ -18,3 +18,9 @@ func _on_Dining_enter():
 func _on_Dining_leave():
 	dining_arrow.hide()
 	dining_sign.hide()
+
+func _input(event):
+	if event is InputEventMouseButton:
+		if event.button_index == BUTTON_LEFT and event.pressed:
+			var path = $Navigation2D.get_simple_path($Player.position, event.position)
+			$Player.path = path
