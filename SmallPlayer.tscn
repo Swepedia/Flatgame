@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://animations/player_idle.png" type="Texture" id=1]
+[ext_resource path="res://animations/player_ud.png" type="Texture" id=2]
+[ext_resource path="res://animations/player_ud2.png" type="Texture" id=3]
+[ext_resource path="res://Scripts/SmallPlayer.gd" type="Script" id=4]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "walk",
+"speed": 10.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+[node name="SmallPlayer" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -225.526 )
+frames = SubResource( 1 )
+animation = "idle"
+playing = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -12.5992, -39.0575 )
+scale = Vector2( 10.0003, 4.2488 )
+shape = SubResource( 2 )

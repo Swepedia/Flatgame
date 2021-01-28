@@ -36,7 +36,7 @@ func _travel_Lobby(area):
 	get_tree().change_scene("res://Entrance.tscn")
 
 func _travel_Piano(area):
-	get_tree()
+	get_tree().change_scene("res://Piano.tscn")
 
 func _input(event):
 	if event is InputEventMouseButton:
