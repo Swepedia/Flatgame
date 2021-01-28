@@ -6,10 +6,10 @@
 [ext_resource path="res://Scripts/ToDining.gd" type="Script" id=4]
 [ext_resource path="res://graphics/plant_1.png" type="Texture" id=5]
 [ext_resource path="res://graphics/plant_3.png" type="Texture" id=6]
-[ext_resource path="res://animations/arrow_curved_1.png" type="Texture" id=7]
+[ext_resource path="res://animations/arrow_straight_2.png" type="Texture" id=7]
 [ext_resource path="res://animations/dining_2.png" type="Texture" id=8]
 [ext_resource path="res://graphics/level_entrance.jpg" type="Texture" id=9]
-[ext_resource path="res://animations/arrow_curved_2.png" type="Texture" id=10]
+[ext_resource path="res://animations/arrow_straight_1.png" type="Texture" id=10]
 [ext_resource path="res://Scripts/Piano.gd" type="Script" id=11]
 [ext_resource path="res://SmallPlayer.tscn" type="PackedScene" id=12]
 
@@ -25,7 +25,7 @@ animations = [ {
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
-"frames": [ ExtResource( 7 ), ExtResource( 10 ) ],
+"frames": [ ExtResource( 10 ), ExtResource( 7 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
