@@ -19,6 +19,9 @@ func _on_Dining_leave():
 	dining_arrow.hide()
 	dining_sign.hide()
 
+func _travel_Dining(area):
+	get_tree().change_scene("res://Dining.tscn")
+
 func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == BUTTON_LEFT and event.pressed:

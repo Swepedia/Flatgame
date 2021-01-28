@@ -31,3 +31,15 @@ func _on_Piano_enter():
 func _on_Piano_leave():
 	piano_arrow.hide()
 	piano_sign.hide()
+
+func _travel_Lobby(area):
+	get_tree().change_scene("res://Entrance.tscn")
+
+func _travel_Piano(area):
+	get_tree()
+
+func _input(event):
+	if event is InputEventMouseButton:
+		if event.button_index == BUTTON_LEFT and event.pressed:
+			var path = $Navigation2D.get_simple_path($Player.position, event.position)
+			$Player.path = path

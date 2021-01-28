@@ -90,8 +90,8 @@ navpoly = SubResource( 1 )
 script = ExtResource( 10 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ToDining"]
-position = Vector2( 392.438, 195.03 )
-scale = Vector2( 9.87526, 4.89643 )
+position = Vector2( 390.438, 168.03 )
+scale = Vector2( 9.87526, 8.09643 )
 shape = SubResource( 2 )
 
 [node name="DiningLabel" type="AnimatedSprite" parent="ToDining"]

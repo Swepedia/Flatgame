@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://graphics/level_dining.jpg" type="Texture" id=1]
 [ext_resource path="res://Scripts/Dining.gd" type="Script" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://animations/arrow_curved_1.png" type="Texture" id=10]
 [ext_resource path="res://animations/arrow_curved_2.png" type="Texture" id=11]
 [ext_resource path="res://Scripts/ToPiano.gd" type="Script" id=12]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=13]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 543.153, 331.038, 623.056, 417.305, 550.931, 405.991, 509.212, 346.594, 777.912, 624.487, 24.1365, 625.902, 146.466, 460.439, 529.718, 548.12, 304.151, 333.866, 239.804, 327.503, 279.402, 270.934, 348.698, 280.833, 418.702, 311.239, 483.049, 408.82, 471.735, 345.887, 186.771, 409.527, 211.52, 367.101, 225.662, 381.95, 426.48, 282.248, 4.33746, 437.104, 3.63035, 388.314, 312.636, 354.373, 435.673, 335.281, 626.591, 566.505, 707.909, 539.635, 305.565, 380.536, 466.078, 447.711, 241.218, 391.142, 275.159, 391.849, 455.472, 507.815 )
@@ -20,7 +21,7 @@ outlines = [ PoolVector2Array( 279.402, 270.934, 348.698, 280.833, 426.48, 282.2
 
 [sub_resource type="RectangleShape2D" id=2]
 
-[sub_resource type="SpriteFrames" id=4]
+[sub_resource type="SpriteFrames" id=3]
 animations = [ {
 "frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
 "loop": true,
@@ -28,7 +29,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="SpriteFrames" id=5]
+[sub_resource type="SpriteFrames" id=4]
 animations = [ {
 "frames": [ ExtResource( 3 ), ExtResource( 6 ) ],
 "loop": true,
@@ -36,7 +37,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=5]
 
 [sub_resource type="SpriteFrames" id=6]
 animations = [ {
@@ -79,12 +80,12 @@ shape = SubResource( 2 )
 [node name="LobbyLabel" type="AnimatedSprite" parent="ToEntrance"]
 position = Vector2( 388.372, 178.471 )
 scale = Vector2( 0.208255, 0.208255 )
-frames = SubResource( 4 )
+frames = SubResource( 3 )
 
 [node name="LobbyArrow" type="AnimatedSprite" parent="ToEntrance"]
 position = Vector2( 390.176, 228.724 )
 scale = Vector2( 0.182941, 0.182941 )
-frames = SubResource( 5 )
+frames = SubResource( 4 )
 
 [node name="ToPiano" type="Area2D" parent="."]
 script = ExtResource( 12 )
@@ -92,7 +93,7 @@ script = ExtResource( 12 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ToPiano"]
 position = Vector2( 31.4645, 304.906 )
 scale = Vector2( 3.22005, 12.965 )
-shape = SubResource( 3 )
+shape = SubResource( 5 )
 
 [node name="PianoLabel" type="AnimatedSprite" parent="ToPiano"]
 position = Vector2( 57.9827, 214.96 )
@@ -103,3 +104,7 @@ frames = SubResource( 6 )
 position = Vector2( 45.9619, 257.387 )
 scale = Vector2( 0.168333, 0.168333 )
 frames = SubResource( 7 )
+
+[node name="Player" parent="." instance=ExtResource( 13 )]
+position = Vector2( 385.985, 369.682 )
+scale = Vector2( 0.193088, 0.193088 )
