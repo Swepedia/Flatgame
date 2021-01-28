@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Flatgame"
-run/main_scene="res://World.tscn"
+run/main_scene="res://Entrance.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -30,4 +30,6 @@ window/size/height=637
 
 [rendering]
 
+quality/intended_usage/framebuffer_allocation=0
+quality/intended_usage/framebuffer_allocation.mobile=0
 environment/default_environment="res://default_env.tres"
