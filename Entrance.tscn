@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://graphics/level_entrance.jpg" type="Texture" id=1]
 [ext_resource path="res://graphics/plant_1.png" type="Texture" id=2]
@@ -12,6 +12,8 @@
 [ext_resource path="res://Scripts/ToDining.gd" type="Script" id=10]
 [ext_resource path="res://graphics/note_1.png" type="Texture" id=11]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=12]
+[ext_resource path="res://ShortWater.tscn" type="PackedScene" id=13]
+[ext_resource path="res://LongWater.tscn" type="PackedScene" id=14]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 320.045, 347.172, 337.506, 334.43, 435.197, 339.857, 450.771, 354.487, 475.125, 380.53, 447.032, 381.28, 325.995, 378.847, 300.459, 376.321, 304.017, 300.649, 369.424, 300.649, 411.046, 305.406, 461.626, 318.148, 437.793, 320.272, 338.214, 314.136, 313.674, 312.013, 449.841, 407.125, 465.948, 417.988, 510.365, 500.013, 481.229, 501.945, 292.356, 500.301, 292.69, 480.946, 311.403, 408.592, 325.714, 395.684, 276.672, 516.319, 484.648, 525.73, 501.149, 531.824, 604.887, 644.33, 114.167, 644.33, 150.61, 567.031, 244.302, 516.653, 489.547, 415.179, 487.112, 394.203, 502.615, 410.056, 478.852, 355.431, 476.492, 338.205, 299.279, 343.161, 289.515, 383.617, 377.748, 247.135, 400.343, 247.135, 521.96, 524.838, 521.216, 512.054, 242.3, 509.645, 259.653, 479.277, 301.403, 323.103, 288.393, 400.454, 466.939, 303.027 )
@@ -78,6 +80,31 @@ flip_h = true
 position = Vector2( 45.3589, 11.5909 )
 texture = ExtResource( 3 )
 flip_h = true
+
+[node name="ShortWater" parent="Background" instance=ExtResource( 13 )]
+position = Vector2( -127.423, -51.9131 )
+rotation = 0.192419
+scale = Vector2( 0.268109, 0.268109 )
+
+[node name="ShortWater2" parent="Background" instance=ExtResource( 13 )]
+position = Vector2( 69.8467, -49.0815 )
+rotation = -0.313246
+scale = Vector2( 0.46303, 0.46303 )
+
+[node name="ShortWater3" parent="Background" instance=ExtResource( 13 )]
+position = Vector2( -287.882, 35.8672 )
+rotation = 1.53991
+scale = Vector2( 0.423039, 0.423039 )
+
+[node name="LongWater" parent="Background" instance=ExtResource( 14 )]
+position = Vector2( 262.473, 56.6866 )
+rotation = -0.06635
+scale = Vector2( 0.268109, 0.268109 )
+
+[node name="LongWater2" parent="Background" instance=ExtResource( 14 )]
+position = Vector2( -193.494, 80.2294 )
+rotation = -1.02454
+scale = Vector2( 0.635471, 0.420477 )
 
 [node name="Navigation2D" type="Navigation2D" parent="."]
 position = Vector2( 2.37842, 0 )

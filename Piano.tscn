@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://animations/dining_1.png" type="Texture" id=1]
 [ext_resource path="res://graphics/plant_2.png" type="Texture" id=2]
@@ -12,6 +12,8 @@
 [ext_resource path="res://animations/arrow_straight_1.png" type="Texture" id=10]
 [ext_resource path="res://Scripts/Piano.gd" type="Script" id=11]
 [ext_resource path="res://SmallPlayer.tscn" type="PackedScene" id=12]
+[ext_resource path="res://ShortWater.tscn" type="PackedScene" id=13]
+[ext_resource path="res://LongWater.tscn" type="PackedScene" id=14]
 
 [sub_resource type="NavigationPolygon" id=6]
 vertices = PoolVector2Array( 486.857, 233.953, 484.079, 229.984, 500.35, 231.572, 498.365, 233.556, 631.876, 328, 654.126, 329.25, 653.534, 330.387, 630.913, 329.197, 546.781, 278.797, 549.5, 276.75, 572.576, 280.781, 574.561, 277.606 )
@@ -78,6 +80,31 @@ flip_h = true
 position = Vector2( 45.3589, 11.5909 )
 texture = ExtResource( 6 )
 flip_h = true
+
+[node name="ShortWater" type="Node2D" parent="Background" instance=ExtResource( 13 )]
+position = Vector2( -127.423, -51.9131 )
+rotation = 0.192419
+scale = Vector2( 0.268109, 0.268109 )
+
+[node name="ShortWater2" type="Node2D" parent="Background" instance=ExtResource( 13 )]
+position = Vector2( 69.8467, -49.0815 )
+rotation = -0.313246
+scale = Vector2( 0.46303, 0.46303 )
+
+[node name="ShortWater3" type="Node2D" parent="Background" instance=ExtResource( 13 )]
+position = Vector2( -287.882, 35.8672 )
+rotation = 1.53991
+scale = Vector2( 0.423039, 0.423039 )
+
+[node name="LongWater" type="Node2D" parent="Background" instance=ExtResource( 14 )]
+position = Vector2( 262.473, 56.6866 )
+rotation = -0.06635
+scale = Vector2( 0.268109, 0.268109 )
+
+[node name="LongWater2" type="Node2D" parent="Background" instance=ExtResource( 14 )]
+position = Vector2( -193.494, 80.2294 )
+rotation = -1.02454
+scale = Vector2( 0.635471, 0.420477 )
 
 [node name="Navigation2D" type="Navigation2D" parent="."]
 
