@@ -34,5 +34,5 @@ playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( -5.03967, -12.5992 )
-scale = Vector2( 2.95108, 1.47834 )
+scale = Vector2( 9.67141, 3.03218 )
 shape = SubResource( 2 )
