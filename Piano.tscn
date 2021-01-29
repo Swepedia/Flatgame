@@ -13,9 +13,14 @@
 [ext_resource path="res://Scripts/Piano.gd" type="Script" id=11]
 [ext_resource path="res://SmallPlayer.tscn" type="PackedScene" id=12]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="NavigationPolygon" id=6]
+vertices = PoolVector2Array( 486.857, 233.953, 484.079, 229.984, 500.35, 231.572, 498.365, 233.556, 631.876, 328, 654.126, 329.25, 653.534, 330.387, 630.913, 329.197, 546.781, 278.797, 549.5, 276.75, 572.576, 280.781, 574.561, 277.606 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6, 7 ), PoolIntArray( 8, 3, 2, 9 ), PoolIntArray( 10, 8, 9, 11 ), PoolIntArray( 10, 11, 4, 7 ) ]
+outlines = [ PoolVector2Array( 484.079, 229.984, 500.35, 231.572, 549.5, 276.75, 574.561, 277.606, 631.876, 328, 654.126, 329.25, 653.534, 330.387, 630.913, 329.197, 572.576, 280.781, 546.781, 278.797, 498.365, 233.556, 486.857, 233.953 ) ]
 
-[sub_resource type="SpriteFrames" id=3]
+[sub_resource type="RectangleShape2D" id=8]
+
+[sub_resource type="SpriteFrames" id=9]
 animations = [ {
 "frames": [ ExtResource( 1 ), ExtResource( 8 ) ],
 "loop": true,
@@ -23,18 +28,13 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="SpriteFrames" id=4]
+[sub_resource type="SpriteFrames" id=10]
 animations = [ {
 "frames": [ ExtResource( 10 ), ExtResource( 7 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
 } ]
-
-[sub_resource type="NavigationPolygon" id=6]
-vertices = PoolVector2Array( 486.857, 233.953, 484.079, 229.984, 500.35, 231.572, 498.365, 233.556, 631.876, 328, 654.126, 329.25, 653.534, 330.387, 630.913, 329.197, 546.781, 278.797, 549.5, 276.75, 572.576, 280.781, 574.561, 277.606 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6, 7 ), PoolIntArray( 8, 3, 2, 9 ), PoolIntArray( 10, 8, 9, 11 ), PoolIntArray( 10, 11, 4, 7 ) ]
-outlines = [ PoolVector2Array( 484.079, 229.984, 500.35, 231.572, 549.5, 276.75, 574.561, 277.606, 631.876, 328, 654.126, 329.25, 653.534, 330.387, 630.913, 329.197, 572.576, 280.781, 546.781, 278.797, 498.365, 233.556, 486.857, 233.953 ) ]
 
 [sub_resource type="ParticlesMaterial" id=7]
 flag_disable_z = true
@@ -79,29 +79,26 @@ position = Vector2( 45.3589, 11.5909 )
 texture = ExtResource( 6 )
 flip_h = true
 
-[node name="ToDining" type="Area2D" parent="."]
-position = Vector2( 85.4297, -9.34389 )
-script = ExtResource( 4 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ToDining"]
-position = Vector2( 310.348, 165.36 )
-scale = Vector2( 9.87526, 8.09643 )
-shape = SubResource( 2 )
-
-[node name="DiningLabel" type="AnimatedSprite" parent="ToDining"]
-position = Vector2( 388.056, 156.23 )
-scale = Vector2( 0.262441, 0.262441 )
-frames = SubResource( 3 )
-
-[node name="DiningArrow" type="AnimatedSprite" parent="ToDining"]
-position = Vector2( 390.576, 203.477 )
-scale = Vector2( 0.175448, 0.175448 )
-frames = SubResource( 4 )
-
 [node name="Navigation2D" type="Navigation2D" parent="."]
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D"]
 navpoly = SubResource( 6 )
+
+[node name="ToDining" type="Area2D" parent="."]
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ToDining"]
+position = Vector2( 390.438, 168.03 )
+scale = Vector2( 9.87526, 8.09643 )
+shape = SubResource( 8 )
+
+[node name="DiningLabel" type="AnimatedSprite" parent="ToDining"]
+position = Vector2( 453.572, 137.331 )
+frames = SubResource( 9 )
+
+[node name="DiningArrow" type="AnimatedSprite" parent="ToDining"]
+position = Vector2( 456.092, 184.578 )
+frames = SubResource( 10 )
 
 [node name="Particles2D" type="Particles2D" parent="."]
 position = Vector2( 657.634, 302.965 )
@@ -115,4 +112,4 @@ texture = ExtResource( 3 )
 
 [node name="SmallPlayer" parent="." instance=ExtResource( 12 )]
 position = Vector2( 512.138, 243.2 )
-scale = Vector2( 0.0794286, 0.0794286 )
+scale = Vector2( 0.306109, 0.306109 )

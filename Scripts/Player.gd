@@ -9,7 +9,7 @@ func _ready():
 
 func _process(delta):
 	var y_coord = self.position.y
-	scale = Vector2(y_coord / 2000, y_coord / 2000)
+	scale = Vector2(y_coord / 500, y_coord / 500)
 	speed = pow(y_coord, 2) / 1000
 	
 	var distance_to_walk = speed * delta

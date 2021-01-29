@@ -95,12 +95,10 @@ shape = SubResource( 2 )
 
 [node name="DiningLabel" type="AnimatedSprite" parent="ToDining"]
 position = Vector2( 388.056, 156.23 )
-scale = Vector2( 0.262441, 0.262441 )
 frames = SubResource( 3 )
 
 [node name="DiningArrow" type="AnimatedSprite" parent="ToDining"]
 position = Vector2( 390.576, 203.477 )
-scale = Vector2( 0.175448, 0.175448 )
 frames = SubResource( 4 )
 
 [node name="Particles2D" type="Particles2D" parent="."]
@@ -115,4 +113,3 @@ texture = ExtResource( 11 )
 
 [node name="Player" parent="." instance=ExtResource( 12 )]
 position = Vector2( 378, 439 )
-scale = Vector2( 0.225054, 0.225054 )

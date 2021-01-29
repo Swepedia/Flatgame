@@ -78,12 +78,10 @@ shape = SubResource( 2 )
 
 [node name="LobbyLabel" type="AnimatedSprite" parent="ToEntrance"]
 position = Vector2( 388.372, 178.471 )
-scale = Vector2( 0.208255, 0.208255 )
 frames = SubResource( 3 )
 
 [node name="LobbyArrow" type="AnimatedSprite" parent="ToEntrance"]
 position = Vector2( 390.176, 228.724 )
-scale = Vector2( 0.182941, 0.182941 )
 frames = SubResource( 4 )
 
 [node name="ToPiano" type="Area2D" parent="."]
@@ -96,12 +94,10 @@ shape = SubResource( 5 )
 
 [node name="PianoLabel" type="AnimatedSprite" parent="ToPiano"]
 position = Vector2( 57.9827, 214.96 )
-scale = Vector2( 0.255276, 0.255276 )
 frames = SubResource( 6 )
 
 [node name="PianoArrow" type="AnimatedSprite" parent="ToPiano"]
 position = Vector2( 45.9619, 257.387 )
-scale = Vector2( 0.168333, 0.168333 )
 frames = SubResource( 7 )
 
 [node name="Player" parent="." instance=ExtResource( 13 )]
